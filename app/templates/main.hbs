@@ -1,0 +1,31 @@
+<div class="scope-container">
+    <div class="content content--readable pad--sm--n pad--md--m">
+        <div class="panel js-profile-panel mar--sm--tn no-radius-on-small">
+            <div class="load-block hide">
+                <div class="load-block-icon juicon juicon-loading">
+                </div>
+            </div>
+
+            {{!-- {{custom-list name="Skills" items=skills remoteActionName="saveSkills"}} --}}
+            
+            <div class="panel__top">
+                <h2 class="panel__heading">
+                    Skills
+                </h2>
+            </div>
+            <div class="panel__body pad--sm--bn">
+                <div class="form__group">
+                    <label>Add skills</label>
+                    {{input value=skillToAdd action="insertSkill"}}
+                    <ul> 
+                        {{#each skill in skills}}
+                            <li>{{skill}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+
+            
+        </div>
+    </div>
+</div>
